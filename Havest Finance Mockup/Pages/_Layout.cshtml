@@ -1,0 +1,37 @@
+﻿<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewData["Title"] | Harvest Finance</title>
+    <link rel="stylesheet" type="text/css" href="~/css/site.css" />
+    <link rel="stylesheet" type="text/css" href="~/css/index.css" />
+</head>
+<body id="site-body">
+    <header id="site-header">
+        <div class="header-selector-left"></div>
+        <div class="header-selector-right"></div>
+        <div class="home-link-1"></div>
+        <a class="home-link-2" asp-area="" asp-page="/Index">Farm</a>
+        <a class="stake-link" asp-area="" asp-page="/Stake">Stake</a>
+        <a class="faq-link" asp-area="" asp-page="/FAQ">FAQ</a>
+        <a class="dash-link" asp-area="" asp-page="/Dashboard">Dashboard</a>
+        <a class="wiki-link" asp-area="" asp-page="/Wiki">Wiki</a>
+        <a class="out-link" asp-area="" asp-page="/Out">策略</a>
+        <div class="mobile-menu" onclick="mobileMenuClick()"></div>
+    </header>
+    <div class="page-container">
+        <main role="main">
+            @RenderBody()
+        </main>
+    </div>
+    <footer>
+        <p class="footer-text"></p>
+        <img src="https://hfmockupfiles.blob.core.windows.net/graphics/footer_farms.png" alt="farms" class="footer-farms" />
+    </footer>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    <script src="~/js/index.js" asp-append-version="true"></script>
+    @RenderSection("Scripts", required: false)
+</body>
+</html>
